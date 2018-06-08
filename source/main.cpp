@@ -75,19 +75,19 @@ int main(int argc, char **argv) {
     SDL_initialize();
     
     //allocate player       X                 Y                  WIDTH  HEIGHT   (OPTIONAL)TEXTURE
-    g_player = entity_alloc(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 53,    64,      "/switch/game/idle.png");
+    g_player = entity_alloc(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 53,    64,      "/switch/game-resources/idle.png");
     
     //create player sprite sheet
     g_player_sprite_sheet[PLAYER_IDLE]   = g_player->t;
-    g_player_sprite_sheet[PLAYER_WALK_0] = load_texture("/switch/game/walk0.png");
-    g_player_sprite_sheet[PLAYER_WALK_1] = load_texture("/switch/game/walk1.png");
+    g_player_sprite_sheet[PLAYER_WALK_0] = load_texture("/switch/game-resources/walk0.png");
+    g_player_sprite_sheet[PLAYER_WALK_1] = load_texture("/switch/game-resources/walk1.png");
     
     //load font
-    g_font  = load_font ("/switch/game/font.ttf", 25);
+    g_font  = load_font ("/switch/game-resources/KidPixies.ttf", 25);
     //load ogg track
-    g_track = load_track("/switch/game/melody.ogg");
+    g_track = load_track("/switch/game-resources/bensound-buddy.mp3");
     //load wav sound effect
-    g_step  = load_sound("/switch/game/step.wav");
+    g_step  = load_sound("/switch/game-resources/step.wav");
     
     //play music        LOOPS (-1 = loop forever)
     play_track(g_track, -1);
