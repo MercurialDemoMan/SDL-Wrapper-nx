@@ -1,2 +1,2 @@
-# SDL-Wrapper-nx
+# SDL-Wrapper
 SDL wrapper for libnx
